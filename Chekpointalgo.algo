@@ -1,0 +1,35 @@
+ALGORITHME chekpoint1
+VAR
+    str: STRING;
+    i,j,h : INTEGER;
+    countC,countV,countM : INTEGER;
+BEGIN
+    //count the number of characters expect space and .
+    FOR i FROM 0 TO (i<str.length) STEP step  DO
+        IF (str[i] != "" || str[i]!= ".") THEN
+            countC:= countC+1;
+            i:=i+1;
+        END_IF
+    END_FOR
+    write (countC)
+
+    //count he number of vowels in the sentence
+    FOR j FROM 0 TO (i<str.length) STEP step  DO
+        IF (str[j] == "a" || str[j] == "e" || str[j] == "i" || str[j] == "o" || str[j] == "u") THEN
+            countV:= countV+1;
+            j:=j+1;
+        END_IF
+    
+    write (countV)
+
+    //count The number of words in the sentence
+    FOR h FROM 0 TO (i<str.length-1) STEP step  DO
+        IF (str[h]==" ") THEN
+            countM:= countM+1;
+            h:=h+1
+        END_IF
+    END_FOR
+    countM:=countM+1;
+    write (countM)
+
+END
